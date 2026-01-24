@@ -1,0 +1,113 @@
+
+
+*************************************************************
+
+   NEOS Server Version 6.0
+   Job#     : 18276106
+   Password : TznsjxGS
+   User     : 
+   Solver   : milp:Gurobi:AMPL
+   Start    : 2026-01-24 13:05:38
+   End      : 2026-01-24 13:05:40
+   Host     : prod-sub-1.neos-server.org
+
+   Disclaimer:
+
+   This information is provided without any express or
+   implied warranty. In particular, there is no warranty
+   of any kind concerning the fitness of this
+   information for any particular purpose.
+
+   Announcements:
+*************************************************************
+You are using the solver gurobi_ampl.
+Checking ampl.mod for gurobi_options...
+Checking ampl.com for gurobi_options...
+Executing AMPL.
+processing data.
+processing commands.
+Executing on prod-exec-1.neos-server.org
+given [*,*]
+:   1   2   3   4   5   6   7   8   9    :=
+1   4   0   7   0   6   8   0   0   3
+2   0   0   0   0   0   0   0   0   0
+3   0   0   0   0   9   0   5   2   0
+4   0   0   8   7   3   0   0   0   2
+5   0   6   0   0   0   0   0   0   0
+6   1   0   0   6   0   0   0   0   0
+7   0   0   0   0   2   0   4   0   5
+8   0   4   0   8   0   1   0   7   0
+9   0   0   6   0   0   0   0   8   0
+;
+
+
+"option presolve 0;" used, but "option presolve 10;" might work better.
+81 variables, all nonlinear
+24 algebraic constraints, all linear; 24 nonzeros
+	24 equality constraints
+27 logical constraints
+1 linear objective; 9 nonzeros.
+
+Gurobi 12.0.3:   tech:threads = 4
+  pre:solve = 2
+  alg:iisfind = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+
+AMPL MP initial flat model has 81 variables (81 integer, 0 binary);
+Objectives: 1 linear; 
+Constraints:  24 linear;
+Logical expressions:  27 alldiff;
+
+AMPL MP final model has 623 variables (108 integer, 513 binary);
+Objectives: 1 linear; 
+Constraints:  381 linear;
+
+
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
+
+CPU model: Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 32 physical cores, 64 logical processors, using up to 4 threads
+
+Non-default parameters:
+InfUnbdInfo  1
+Presolve  2
+Threads  4
+
+Optimize a model with 381 rows, 623 columns and 2950 nonzeros
+Model fingerprint: 0xe9f9c8e5
+Variable types: 53 continuous, 570 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+00]
+  Objective range  [0e+00, 0e+00]
+  Bounds range     [1e+00, 9e+00]
+  RHS range        [1e+00, 9e+00]
+Presolve removed 381 rows and 623 columns
+Presolve time: 0.01s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 64 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+Gurobi 12.0.3: optimal solution; objective 0
+0 simplex iterations
+
+Sudoku Solution
+===============
+    1  2  3  4  5  6  7  8  9 
+ 1  4  2  7  5  6  8  1  9  3 
+ 2  9  1  5  3  4  2  8  6  7 
+ 3  6  8  3  1  9  7  5  2  4 
+ 4  5  9  8  7  3  4  6  1  2 
+ 5  7  6  4  2  1  9  3  5  8 
+ 6  1  3  2  6  8  5  7  4  9 
+ 7  8  7  1  9  2  6  4  3  5 
+ 8  3  4  9  8  5  1  2  7  6 
+ 9  2  5  6  4  7  3  9  8  1 
+
+NEOS Server Home
