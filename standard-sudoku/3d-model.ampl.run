@@ -1,0 +1,36 @@
+option gurobi_options 'presolve=2 iis=1 outlev=1';
+
+option presolve 0;
+option show_stats 2;
+
+display given;
+
+solve;
+
+display X;
+
+printf "\nSudoku Solution:\n";
+printf "    ";
+for {j in COLS} printf "%2d ", j;
+printf "\n";
+printf "   +";
+for {j in COLS} printf "--";
+printf "-+\n";
+
+for {i in ROWS} {
+    printf "%2d |", i;
+    for {j in COLS} {
+        for {v in VALS: X[i,j,v] > 0.5} {
+            printf "%2d ", v;
+        }
+    }
+    printf " |\n";
+    if i mod 3 = 0 and i < 9 then {
+        printf "   +";
+        for {j in COLS} printf "--";
+        printf "-+\n";
+    }
+}
+printf "   +";
+for {j in COLS} printf "--";
+printf "-+\n";
