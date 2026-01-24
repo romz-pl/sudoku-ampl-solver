@@ -1,4 +1,9 @@
-# Sets
+#
+# 3D AMPL model with binary matrix
+#
+# Author: Zbigniew Romanowski
+#
+
 set ROWS := 1..9;
 set COLS := 1..9;
 set VALS := 1..9;
