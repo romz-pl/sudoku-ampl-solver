@@ -1,0 +1,10 @@
+option gurobi_options 'presolve=2 iis=1 outlev=1';
+
+option presolve 0;
+option show_stats 2;
+
+display given;
+
+solve;
+
+display X;
