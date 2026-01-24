@@ -12,4 +12,4 @@
 
 ## AMPL Models based on MILP
 + [2D AMPL model with alldiff constraint](./standard-sudoku/2d-model.ampl)
-+ [3D AMPL model with binary matrix](./standard-sudoku/2d-model.ampl)
++ [3D AMPL model with binary matrix](./standard-sudoku/3d-model.ampl)
