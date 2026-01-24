@@ -1,4 +1,8 @@
-# Sudoku Solver using alldiff constraint
+#
+# 2D AMPL model with alldiff constraint
+#
+# Author: Zbigniew Romanowski
+#
 
 # Parameters
 param n := 9;  # Grid size (9x9)
