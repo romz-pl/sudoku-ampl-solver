@@ -5,7 +5,7 @@ set VALS := 1..9;
 set BOXES := 1..9;
 
 # Parameters - initial values (0 means empty cell)
-param initial{ROWS, COLS} default 0;
+param given{ROWS, COLS} default 0;
 
 # Decision variables - value assigned to each cell
 var X{ROWS, COLS, VALS} binary;
@@ -30,5 +30,5 @@ subject to one_per_box{v in VALS, br in 0..2, bc in 0..2}:
     sum{i in 3*br+1..3*br+3, j in 3*bc+1..3*bc+3} X[i,j,v] = 1;
 
 # Fix initial values
-subject to fix_initial{i in ROWS, j in COLS: initial[i,j] > 0}:
-    X[i,j,initial[i,j]] = 1;
+subject to fix_initial{i in ROWS, j in COLS: given[i,j] > 0}:
+    X[i,j,given[i,j]] = 1;

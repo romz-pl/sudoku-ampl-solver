@@ -7,30 +7,22 @@ display given;
 
 solve;
 
-display X;
+printf "\n";
+printf "Sudoku Solution\n";
+printf "===============\n";
 
-printf "\nSudoku Solution:\n";
-printf "    ";
+printf "   ";
 for {j in COLS} printf "%2d ", j;
 printf "\n";
-printf "   +";
-for {j in COLS} printf "--";
-printf "-+\n";
+
 
 for {i in ROWS} {
-    printf "%2d |", i;
+    printf "%2d ", i;
     for {j in COLS} {
-        for {v in VALS: X[i,j,v] > 0.5} {
+        for {v in VALS: X[i,j,v] > 0} {
             printf "%2d ", v;
         }
     }
-    printf " |\n";
-    if i mod 3 = 0 and i < 9 then {
-        printf "   +";
-        for {j in COLS} printf "--";
-        printf "-+\n";
-    }
+    printf "\n";
 }
-printf "   +";
-for {j in COLS} printf "--";
-printf "-+\n";
+printf "\n";
