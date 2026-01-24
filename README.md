@@ -10,4 +10,6 @@
 >
 > Wikipedia: [Integer programming](https://en.wikipedia.org/wiki/Integer_programming)
 
-## Our Models based on MILP
+## AMPL Models based on MILP
++ [2D AMPL model with alldiff constraint](./standard-sudoku/2d-model.ampl)
++ [3D AMPL model with binary matrix](./standard-sudoku/2d-model.ampl)
