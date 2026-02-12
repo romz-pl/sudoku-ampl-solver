@@ -19,3 +19,6 @@
 + [sudoku.com](https://sudoku.com)
 + [The New York Times Sudoku](https://www.nytimes.com)
 + [Sudoku Bliss](https://sudokubliss.com/)
+
+## References
++ D.M. Gay, B.W. Kernighan [AMPL: A Modeling Language for Mathematical Programming](https://ampl.com/wp-content/uploads/BOOK.pdf), 2003
